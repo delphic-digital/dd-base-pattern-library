@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1503432658791,
+  "timestamp": 1503435161556,
   "graph": {
     "options": {
       "directed": true,
@@ -107,11 +107,19 @@
       {
         "v": "01-molecules\\04-form-molecules\\00-input.mustache",
         "value": {
-          "compileState": "clean"
+          "compileState": "clean",
+          "lineagePath": "../../patterns/02-organisms-form-organisms-00-form-stacked\\02-organisms-form-organisms-00-form-stacked.rendered.html",
+          "lineagePattern": "organisms-form-stacked"
         }
       },
       {
         "v": "02-organisms\\00-organism\\00-organism.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
+      {
+        "v": "02-organisms\\form-organisms\\00-form-stacked.mustache",
         "value": {
           "compileState": "clean"
         }
@@ -144,6 +152,11 @@
       {
         "v": "01-molecules\\04-form-molecules\\00-input.mustache",
         "w": "00-atoms\\04-forms\\00-input.mustache",
+        "value": {}
+      },
+      {
+        "v": "02-organisms\\form-organisms\\00-form-stacked.mustache",
+        "w": "01-molecules\\04-form-molecules\\00-input.mustache",
         "value": {}
       }
     ]
