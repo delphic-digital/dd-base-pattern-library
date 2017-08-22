@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1503435161556,
+  "timestamp": 1503435818146,
   "graph": {
     "options": {
       "directed": true,
@@ -108,6 +108,7 @@
         "v": "01-molecules\\04-form-molecules\\00-input.mustache",
         "value": {
           "compileState": "clean",
+          "lineageState": "inprogress",
           "lineagePath": "../../patterns/02-organisms-form-organisms-00-form-stacked\\02-organisms-form-organisms-00-form-stacked.rendered.html",
           "lineagePattern": "organisms-form-stacked"
         }
