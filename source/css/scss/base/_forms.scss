@@ -1,0 +1,46 @@
+
+form {
+
+}
+
+input, textarea {
+    background-color: $input-bg;
+    padding: 12px 24px;
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: $sans-serif;
+    display: block;
+    width: 100%;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+
+    /* Positioning */
+    border: none;
+    padding: 12px 48px 12px 24px;
+
+    /* Typography */
+    font-size: 20px;
+    font-weight: 300;
+    font-family: $sans-serif;
+
+    /* background */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAI1JREFUeNpi1Jp9bS4DA0MSA3lgPhOQSAPi7WRoBulJBRnwF4hDgPgMCZrPQPX8ZYIKfANiLyC+S4Tmu1C1ID0MTEgSr4HYA4jf4NH8BqrmNUyACU3BHajp37Fo/g6Vu4MsyIRF4Wmo//4hif2Dip1GV8yEw6nboLEDA2lQMQzAgse/oPQhi8TGCgACDACG3B473/hM4wAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-color: $input-bg;
+}
+
+// select, x:-moz-any-link             { height: 20px; } /* Firefox 2 and below */
+// select, x:-moz-any-link, x:default  { height: 22px; } /* Firefox 3 and up */

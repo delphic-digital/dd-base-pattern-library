@@ -1,0 +1,23 @@
+.row {
+
+    &__col {
+        
+    }
+
+    &__gutter {
+        width: 100%;
+        height: 10px;
+    }
+    
+    @include from(2) {
+        display: flex;
+
+        &--v-baseline {
+            align-items: baseline;
+        }
+
+        &__gutter {
+            width: 10px;
+        }
+    }
+}

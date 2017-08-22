@@ -1,0 +1,12 @@
+.header-textured {
+
+    background-image: url('../images/pattern-cube-blue.jpg');
+    padding: 60px 30px;
+
+    &__text {
+        color: white;
+        font-size: 48px;
+        font-weight: 300;
+        margin: 0;
+    }
+}

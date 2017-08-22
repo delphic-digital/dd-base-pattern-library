@@ -1,0 +1,60 @@
+.btn {
+    border: none;
+    box-shadow: inset 0 0 0 1px white;
+    padding: 6px 15px 5px;
+    
+    font-size: 13px;
+	text-transform: uppercase;
+    text-decoration: none;
+
+	color: white;
+    background: $btn-blue;
+    
+    cursor: pointer;
+
+    &:hover {
+        background: black;
+        text-decoration: none;
+        color: white;
+    }
+
+    &--pink {
+        background-color: $random-pink;
+        box-shadow: inset 0 0 0 1px $random-pink;
+    }
+    &--white {
+        background-color: white;
+        color: $btn-blue;
+        box-shadow: inset 0 0 0 1px $btn-blue;
+    }
+    &--orange {
+        background-color: black;
+        box-shadow: inset 0 0 0 1px $tag-orange;
+        &:hover {
+            background-color: $tag-orange;
+        }
+    }
+    &--green {
+        background-color: black;
+        box-shadow: inset 0 0 0 1px $tag-green;
+        &:hover {
+            background-color: $tag-green;
+        }
+    }
+    &--purple {
+        background-color: black;
+        box-shadow: inset 0 0 0 1px $tag-purple;
+        &:hover {
+            background-color: $tag-purple;
+        }
+    }
+
+    &--small {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+    &--large {
+        font-size: 18px;
+        padding: 13px 25px;
+    }
+}

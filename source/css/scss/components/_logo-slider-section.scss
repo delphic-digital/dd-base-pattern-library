@@ -1,0 +1,9 @@
+.logo-slider-section {
+    background-color: $delphic-blue;
+    padding: 40px 0;
+
+    &__width-constraint {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+}
