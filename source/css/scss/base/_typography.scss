@@ -15,12 +15,12 @@ h1, h2, h3, h4, h5, h6 {
     color: $title-blue;
 }
 
-h1 { font-size: 18px; }
-h2 { font-size: 18px; }
-h3 { font-size: 14px; }
-h4 { font-size: 12px; }
-h5 { font-size: 11px; }
-h6 { font-size: 8px; }
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; text-transform: uppercase; }
+h6 { font-size: 14px; text-transform: uppercase; }
 
 .lead-in {
     font-size: 18px;
@@ -37,7 +37,7 @@ a {
     }
 }
 
-p, blockquote, table, pre  { margin: 0 0 1.4em; }
+p, blockquote, table, pre  { margin: 0 0 15px; }
 
 ul { 
     list-style-type: none; 
@@ -97,13 +97,14 @@ table {
     border-right: none;
 
     th {
+        color: $white;
         font-weight: bold;
-        background-color: #DDE7F0;
+        background-color: $delphic-blue;
     }
     
     tr {
         &:nth-child(2n) {
-            background: #666;
+            background: $gray-xlt;
         }
     }
 

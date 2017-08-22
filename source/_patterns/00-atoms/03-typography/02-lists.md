@@ -1,4 +1,5 @@
 ---
+title: Lists
 state: inreview
 ---
-The media block consists of...
+This block shows how lists will be styled within user generated content.

@@ -406,22 +406,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #081E35; }
 
 h1 {
-  font-size: 18px; }
+  font-size: 30px; }
 
 h2 {
-  font-size: 18px; }
+  font-size: 24px; }
 
 h3 {
-  font-size: 14px; }
+  font-size: 20px; }
 
 h4 {
-  font-size: 12px; }
+  font-size: 18px; }
 
 h5 {
-  font-size: 11px; }
+  font-size: 16px;
+  text-transform: uppercase; }
 
 h6 {
-  font-size: 8px; }
+  font-size: 14px;
+  text-transform: uppercase; }
 
 .lead-in {
   font-size: 18px;
@@ -435,7 +437,7 @@ a {
     color: #081E35; }
 
 p, blockquote, table, pre {
-  margin: 0 0 1.4em; }
+  margin: 0 0 15px; }
 
 ul {
   list-style-type: none;
@@ -487,16 +489,14 @@ table {
   border-top: none;
   border-right: none; }
   table th {
+    color: #fff;
     font-weight: bold;
-    background-color: #DDE7F0; }
+    background-color: #2999d6; }
   table tr:nth-child(2n) {
-    background: #666; }
+    background: #ccc; }
   table td {
     padding: 5px;
     line-height: 1em; }
-
-.texture-cube-blue {
-  background-image: url("../images/pattern-cube-blue.jpg"); }
 
 input, textarea {
   background-color: #f6f6f6;
@@ -598,22 +598,6 @@ select {
   .btn--large {
     font-size: 18px;
     padding: 13px 25px; }
-
-.header-textured {
-  background-image: url("../images/pattern-cube-blue.jpg");
-  padding: 60px 30px; }
-  .header-textured__text {
-    color: white;
-    font-size: 48px;
-    font-weight: 300;
-    margin: 0; }
-
-.logo-slider-section {
-  background-color: #2999d6;
-  padding: 40px 0; }
-  .logo-slider-section__width-constraint {
-    max-width: 980px;
-    margin: 0 auto; }
 
 .row__gutter {
   width: 100%;
