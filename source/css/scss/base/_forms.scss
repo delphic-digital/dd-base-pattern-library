@@ -1,21 +1,28 @@
 
-form {
+.form {
+    &__item { margin-bottom: 20px; }
 
-}
+    &__input,
+    &__textarea {
+        background-color: $input-bg;
+        padding: 12px 24px;
+        border: none;
+        font-size: 20px;
+        font-weight: 300;
+        font-family: $sans-serif;
+        display: block;
+        width: 100%;
+    }
 
-input, textarea {
-    background-color: $input-bg;
-    padding: 12px 24px;
-    border: none;
-    font-size: 20px;
-    font-weight: 300;
-    font-family: $sans-serif;
-    display: block;
-    width: 100%;
-}
+    &__textarea {
+        min-height: 200px;
+    }
 
-textarea {
-    min-height: 200px;
+    &__fieldset {
+        margin: 0 0 20px;
+        padding: 0;
+        border: none;
+    }
 }
 
 
