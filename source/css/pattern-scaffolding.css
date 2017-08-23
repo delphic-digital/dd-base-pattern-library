@@ -63,3 +63,8 @@
   padding: 0;
   background: none;
 }
+
+
+.sg-tabs-content {
+  min-height: 300px;
+}
