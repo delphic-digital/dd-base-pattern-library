@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1503518331924,
+  "timestamp": 1503524430976,
   "graph": {
     "options": {
       "directed": true,
@@ -72,6 +72,7 @@
         "v": "00-atoms\\04-form-atoms\\05-textarea.mustache",
         "value": {
           "compileState": "clean",
+          "lineageState": "inprogress",
           "lineagePath": "../../patterns/01-molecules-04-form-molecules-05-textarea\\01-molecules-04-form-molecules-05-textarea.rendered.html",
           "lineagePattern": "molecules-textarea"
         }
@@ -86,6 +87,7 @@
         "v": "00-atoms\\04-form-atoms\\08-checkbox.mustache",
         "value": {
           "compileState": "clean",
+          "lineageState": "inprogress",
           "lineagePath": "../../patterns/01-molecules-04-form-molecules-08-checkbox\\01-molecules-04-form-molecules-08-checkbox.rendered.html",
           "lineagePattern": "molecules-checkbox"
         }
@@ -94,6 +96,7 @@
         "v": "00-atoms\\04-form-atoms\\09-radio.mustache",
         "value": {
           "compileState": "clean",
+          "lineageState": "inprogress",
           "lineagePath": "../../patterns/01-molecules-04-form-molecules-09-radio\\01-molecules-04-form-molecules-09-radio.rendered.html",
           "lineagePattern": "molecules-radio"
         }
@@ -102,6 +105,14 @@
         "v": "00-atoms\\05-buttons\\buttons.mustache",
         "value": {
           "compileState": "clean"
+        }
+      },
+      {
+        "v": "00-atoms\\image\\image.mustache",
+        "value": {
+          "compileState": "clean",
+          "lineagePath": "../../patterns/02-organisms-slider-slider\\02-organisms-slider-slider.rendered.html",
+          "lineagePattern": "organisms-slider"
         }
       },
       {
@@ -160,6 +171,12 @@
       },
       {
         "v": "02-organisms\\form-organisms\\fieldset.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
+      {
+        "v": "02-organisms\\slider\\slider.mustache",
         "value": {
           "compileState": "clean"
         }
@@ -236,6 +253,11 @@
       {
         "v": "02-organisms\\form-organisms\\00-form-stacked.mustache",
         "w": "01-molecules\\04-form-molecules\\08-checkbox.mustache",
+        "value": {}
+      },
+      {
+        "v": "02-organisms\\slider\\slider.mustache",
+        "w": "00-atoms\\image\\image.mustache",
         "value": {}
       }
     ]

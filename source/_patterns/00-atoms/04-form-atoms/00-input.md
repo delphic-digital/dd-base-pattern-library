@@ -1,4 +1,5 @@
 ---
 state: inprogress
 ---
-The media block consists of...
+
+Inputs alone are not useable, go to the input molecule

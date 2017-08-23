@@ -73,6 +73,7 @@
   },
   "seconds": "31",
   "id": "default-id",
+  "alt": "default alt text",
   "label": "Default label",
   "form-name": "default-name"
 }
