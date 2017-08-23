@@ -25,6 +25,15 @@
       "css" : "./docs/css"
     }
   },
+  "plugins": {
+    "plugin-node-tab": {
+      "enabled": true,
+      "initialized": false,
+      "options": {
+        "tabsToAdd": ["scss","js","umd"]
+      }
+    }
+  },
   "styleGuideExcludes": [
   ],
   "defaultPattern": "all",

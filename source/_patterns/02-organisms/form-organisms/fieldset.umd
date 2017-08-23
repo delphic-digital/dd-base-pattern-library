@@ -4,10 +4,10 @@
   } else if (typeof exports === 'object') {
     module.exports = factory();
   } else {
-    root.Foo = factory();
+    root.Fieldset = factory();
   }
 }(this, function() {
 'use strict';
-function Foo() {}
-return Foo;
+function Fieldset() {}
+return Fieldset;
 }));

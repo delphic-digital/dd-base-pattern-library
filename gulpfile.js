@@ -8,6 +8,7 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
   umd = require('gulp-umd'),
+  rename = require('gulp-rename'),
   argv = require('minimist')(process.argv.slice(2)),
   chalk = require('chalk');
 
@@ -35,15 +36,19 @@ function normalizePath() {
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
 // JS copy
-gulp.task('pl-copy:js', function() {
+gulp.task('pl-copy:js', function () {
+  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+  .pipe(gulp.dest(normalizePath(paths().public.js)));
+});
+//Make UMD versions of the JS files
+gulp.task('pl-js-to-umd', function() {
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.root)} )
     .pipe(umd())
-    .pipe(gulp.dest(normalizePath(paths().public.js)));
+    .pipe(rename(function(path){
+      path.extname = ".umd"
+    }))
+    .pipe(gulp.dest(paths().source.root));
 });
-// gulp.task('pl-copy:js', function () {
-//   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
-//     .pipe(gulp.dest(normalizePath(paths().public.js)));
-// });
 
 // Images copy
 gulp.task('pl-copy:img', function () {
@@ -133,6 +138,7 @@ function build(done) {
 }
 
 gulp.task('pl-assets', gulp.series(
+  'pl-js-to-umd',
   'pl-copy:js',
   'pl-copy:img',
   'pl-copy:favicon',
