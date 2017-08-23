@@ -625,3 +625,6 @@ select {
 
 .pad {
   padding: 17px; }
+
+fieldset {
+  padding: 100px; }
