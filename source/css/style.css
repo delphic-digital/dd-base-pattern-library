@@ -543,9 +543,7 @@ select {
   width: auto;
   margin-bottom: 5px; }
   .form__item--radio .form__input {
-    z-index: 2;
-    position: absolute;
-    width: 100%;
+    width: auto;
     height: 100%;
     opacity: 0;
     cursor: pointer; }
@@ -566,7 +564,8 @@ select {
       box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.1);
       transition: background .22s ease;
       -webkit-transition: background .22s ease; }
-  .form__item--radio input:checked + label:before {
+  .form__item--radio input:checked + label:before,
+  .form__item--radio input:focus + label:before {
     background-color: #2a9bd6; }
 
 .btn {

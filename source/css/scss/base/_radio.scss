@@ -5,9 +5,9 @@
         margin-bottom: 5px;
         
         .form__input {
-            z-index: 2;
-            position: absolute;
-            width: 100%;
+            // z-index: 2;
+            // position: absolute;
+            width: auto;
             height: 100%;
             opacity: 0;
             cursor: pointer;
@@ -34,7 +34,8 @@
             }
         }
 
-        input:checked + label:before {
+        input:checked + label:before,
+        input:focus + label:before {
             background-color: #2a9bd6;
         }
     }
