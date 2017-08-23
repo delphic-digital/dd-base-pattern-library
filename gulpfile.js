@@ -115,6 +115,14 @@ gulp.task('pl-sass', function(){
     }).on('error', sass.logError))
     .pipe(gulp.dest(path.resolve(paths().source.css)));
 });
+// .pipe(rename(function(path){
+//   path.basename = "_" + path.basename;
+// }))
+gulp.task('pl-sass-patterns', function(){
+  return gulp.src(path.resolve(paths().source.patterns, '**/*.scss'))
+    .pipe(concat("_sandwich.scss"))
+    .pipe(gulp.dest(path.resolve(paths().source.css)));
+});
 
 /******************************************************
  * PATTERN LAB CONFIGURATION - API with core library
@@ -156,6 +164,7 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:img',
   'pl-copy:favicon',
   'pl-copy:font',
+  'pl-sass-patterns',
   'pl-sass',
   'pl-copy:css',
   'pl-copy:styleguide',
@@ -233,9 +242,15 @@ function watch() {
   const watchers = [
     {
       name: 'SASS',
-      paths: [normalizePath(paths().source.css, '**', '*.scss')],
+      paths: [normalizePath(paths().source.scss, '**', '*.scss')],
       config: { awaitWriteFinish: true },
       tasks: gulp.series('pl-sass','pl-copy:css', reloadCSS)
+    },
+    {
+      name: 'PatternSASS',
+      paths: [normalizePath(paths().source.patterns, '**', '*.scss')],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-sass-patterns','pl-sass','pl-copy:css', reloadCSS)
     },
     {
       name: 'CSS',

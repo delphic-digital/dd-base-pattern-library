@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1503512990773,
+  "timestamp": 1503515317041,
   "graph": {
     "options": {
       "directed": true,
@@ -85,7 +85,9 @@
       {
         "v": "00-atoms\\04-form-atoms\\08-checkbox.mustache",
         "value": {
-          "compileState": "clean"
+          "compileState": "clean",
+          "lineagePath": "../../patterns/01-molecules-04-form-molecules-08-checkbox\\01-molecules-04-form-molecules-08-checkbox.rendered.html",
+          "lineagePattern": "molecules-checkbox"
         }
       },
       {
@@ -127,6 +129,15 @@
         }
       },
       {
+        "v": "01-molecules\\04-form-molecules\\08-checkbox.mustache",
+        "value": {
+          "compileState": "clean",
+          "lineageState": "inprogress",
+          "lineagePath": "../../patterns/02-organisms-form-organisms-00-form-stacked\\02-organisms-form-organisms-00-form-stacked.rendered.html",
+          "lineagePattern": "organisms-form-stacked"
+        }
+      },
+      {
         "v": "01-molecules\\04-form-molecules\\09-radio.mustache",
         "value": {
           "compileState": "clean",
@@ -154,13 +165,13 @@
         }
       },
       {
-        "v": "C:\\Users\\imccallum\\Projects\\delphic\\dd-base-pattern-library\\source\\_meta\\_00-head.mustache",
+        "v": "C:\\Users\\amcdonnell\\Code\\dd-base-pattern-library\\source\\_meta\\_00-head.mustache",
         "value": {
           "compileState": null
         }
       },
       {
-        "v": "C:\\Users\\imccallum\\Projects\\delphic\\dd-base-pattern-library\\source\\_meta\\_01-foot.mustache",
+        "v": "C:\\Users\\amcdonnell\\Code\\dd-base-pattern-library\\source\\_meta\\_01-foot.mustache",
         "value": {
           "compileState": null
         }
@@ -198,6 +209,11 @@
         "value": {}
       },
       {
+        "v": "01-molecules\\04-form-molecules\\08-checkbox.mustache",
+        "w": "00-atoms\\04-form-atoms\\08-checkbox.mustache",
+        "value": {}
+      },
+      {
         "v": "01-molecules\\04-form-molecules\\09-radio.mustache",
         "w": "00-atoms\\04-form-atoms\\09-radio.mustache",
         "value": {}
@@ -215,6 +231,11 @@
       {
         "v": "02-organisms\\form-organisms\\00-form-stacked.mustache",
         "w": "01-molecules\\04-form-molecules\\09-radio.mustache",
+        "value": {}
+      },
+      {
+        "v": "02-organisms\\form-organisms\\00-form-stacked.mustache",
+        "w": "01-molecules\\04-form-molecules\\08-checkbox.mustache",
         "value": {}
       }
     ]

@@ -26,29 +26,37 @@
 
 <body class="">
 
-  <div class="form__item">
-    <label for="default-id" class="form__label">Default label</label>
-    <textarea id="default-id" name="default-id" class="form__textarea" placeholder="placeholder text"></textarea>
-  </div>
+  <fieldset class="form__fieldset">
+    <legend class="form__legend">Checkbox Legend</legend>
+    <div class="form__item form__item--checkbox">
+      <input type="checkbox" id="form__checkbox-input-0" class="form__input" name="default-name">
+      <label for="form__checkbox-input-0" class="form__label">checkbox 0</label>
+    </div>
+
+    <div class="form__item form__item--checkbox">
+      <input type="checkbox" id="form__checkbox-input-1" class="form__input" name="default-name">
+      <label for="form__checkbox-input-1" class="form__label">checkbox 1</label>
+    </div>
+
+    <div class="form__item form__item--checkbox">
+      <input type="checkbox" id="form__checkbox-input-2" class="form__input" name="default-name">
+      <label for="form__checkbox-input-2" class="form__label">checkbox 2</label>
+    </div>
+
+  </fieldset>
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
     {
       "cssEnabled": false,
       "patternLineageExists": true,
       "patternLineages": [{
-        "lineagePattern": "atoms-label",
-        "lineagePath": "../../patterns/00-atoms-04-form-atoms-01-label\\00-atoms-04-form-atoms-01-label.rendered.html"
-      }, {
-        "lineagePattern": "atoms-textarea",
-        "lineagePath": "../../patterns/00-atoms-04-form-atoms-05-textarea\\00-atoms-04-form-atoms-05-textarea.rendered.html",
+        "lineagePattern": "atoms-checkbox",
+        "lineagePath": "../../patterns/00-atoms-04-form-atoms-08-checkbox\\00-atoms-04-form-atoms-08-checkbox.rendered.html",
         "lineageState": "inprogress"
       }],
       "lineage": [{
-        "lineagePattern": "atoms-label",
-        "lineagePath": "../../patterns/00-atoms-04-form-atoms-01-label\\00-atoms-04-form-atoms-01-label.rendered.html"
-      }, {
-        "lineagePattern": "atoms-textarea",
-        "lineagePath": "../../patterns/00-atoms-04-form-atoms-05-textarea\\00-atoms-04-form-atoms-05-textarea.rendered.html",
+        "lineagePattern": "atoms-checkbox",
+        "lineagePath": "../../patterns/00-atoms-04-form-atoms-08-checkbox\\00-atoms-04-form-atoms-08-checkbox.rendered.html",
         "lineageState": "inprogress"
       }],
       "patternLineageRExists": true,
@@ -69,8 +77,8 @@
         "patternSubtype": "form-molecules"
       },
       "patternExtension": "mustache",
-      "patternName": "Textarea",
-      "patternPartial": "molecules-textarea",
+      "patternName": "Checkbox",
+      "patternPartial": "molecules-checkbox",
       "patternState": "inprogress",
       "patternEngineName": "mustache",
       "extraOutput": {}
