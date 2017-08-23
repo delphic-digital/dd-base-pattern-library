@@ -36,6 +36,9 @@
   "devDependencies": {
     "breakpoint-sass": "^2.7.1",
     "breakpoint-slicer": "^2.0.0",
-    "gulp-sass": "^3.1.0"
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-umd": "^0.2.1",
+    "plugin-node-tab": "^2.0.2"
   }
 }

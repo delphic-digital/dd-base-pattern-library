@@ -7,6 +7,8 @@ var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
+  umd = require('gulp-umd'),
+  rename = require('gulp-rename'),
   argv = require('minimist')(process.argv.slice(2)),
   chalk = require('chalk');
 
@@ -36,7 +38,16 @@ function normalizePath() {
 // JS copy
 gulp.task('pl-copy:js', function () {
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
-    .pipe(gulp.dest(normalizePath(paths().public.js)));
+  .pipe(gulp.dest(normalizePath(paths().public.js)));
+});
+//Make UMD versions of the JS files
+gulp.task('pl-js-to-umd', function() {
+  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.root)} )
+    .pipe(umd())
+    .pipe(rename(function(path){
+      path.extname = ".umd"
+    }))
+    .pipe(gulp.dest(paths().source.root));
 });
 
 // Images copy
@@ -127,6 +138,7 @@ function build(done) {
 }
 
 gulp.task('pl-assets', gulp.series(
+  'pl-js-to-umd',
   'pl-copy:js',
   'pl-copy:img',
   'pl-copy:favicon',
@@ -199,6 +211,10 @@ function reloadCSS(done) {
   browserSync.reload('*.css');
   done();
 }
+function reloadCSS(done) {
+  browserSync.reload('*.js');
+  done();
+}
 
 function watch() {
   const watchers = [
@@ -223,6 +239,7 @@ function watch() {
     {
       name: 'Source Files',
       paths: [
+        normalizePath(paths().source.patterns, '**', '*.js'),
         normalizePath(paths().source.patterns, '**', '*.json'),
         normalizePath(paths().source.patterns, '**', '*.md'),
         normalizePath(paths().source.data, '**', '*.json'),
