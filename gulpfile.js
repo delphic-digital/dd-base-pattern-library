@@ -10,7 +10,8 @@ var gulp = require('gulp'),
   umd = require('gulp-umd'),
   rename = require('gulp-rename'),
   argv = require('minimist')(process.argv.slice(2)),
-  chalk = require('chalk');
+  chalk = require('chalk'),
+  concat = require('gulp-concat');
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -35,19 +36,30 @@ function normalizePath() {
 /******************************************************
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
-// JS copy
+// JS copy - just the JS files in the js folder, not the ones from the patterns
 gulp.task('pl-copy:js', function () {
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
   .pipe(gulp.dest(normalizePath(paths().public.js)));
 });
-//Make UMD versions of the JS files
+
+// Make UMD versions of the JS files (I just made up umd for the tabs in patternlab)
 gulp.task('pl-js-to-umd', function() {
-  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.root)} )
+  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.patterns)} )
     .pipe(umd())
     .pipe(rename(function(path){
       path.extname = ".umd"
     }))
-    .pipe(gulp.dest(paths().source.root));
+    .pipe(gulp.dest(paths().source.patterns));
+});
+
+// Make a big sandwich.js from the .umd files so they can all be loaded in the patternlab page
+gulp.task('pl-js-sandwich', function() {
+  return gulp.src('**/*.umd', {cwd: normalizePath(paths().source.patterns)} )
+    .pipe(rename(function(path){
+      path.extname = ".js"
+    }))
+    .pipe(concat("sandwich.js"))
+    .pipe(gulp.dest(paths().public.js));
 });
 
 // Images copy
@@ -139,6 +151,7 @@ function build(done) {
 
 gulp.task('pl-assets', gulp.series(
   'pl-js-to-umd',
+  'pl-js-sandwich',
   'pl-copy:js',
   'pl-copy:img',
   'pl-copy:favicon',
@@ -211,7 +224,7 @@ function reloadCSS(done) {
   browserSync.reload('*.css');
   done();
 }
-function reloadCSS(done) {
+function reloadJS(done) {
   browserSync.reload('*.js');
   done();
 }
@@ -231,6 +244,12 @@ function watch() {
       tasks: gulp.series('pl-copy:css', reloadCSS)
     },
     {
+      name: 'UMD',
+      paths: [normalizePath(paths().source.patterns, '**', '*.js')],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-js-to-umd', 'pl-js-sandwich', build, reload)
+    },
+    {
       name: 'Styleguide Files',
       paths: [normalizePath(paths().source.styleguide, '**', '*')],
       config: { awaitWriteFinish: true },
@@ -239,7 +258,6 @@ function watch() {
     {
       name: 'Source Files',
       paths: [
-        normalizePath(paths().source.patterns, '**', '*.js'),
         normalizePath(paths().source.patterns, '**', '*.json'),
         normalizePath(paths().source.patterns, '**', '*.md'),
         normalizePath(paths().source.data, '**', '*.json'),
