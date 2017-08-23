@@ -211,6 +211,10 @@ function reloadCSS(done) {
   browserSync.reload('*.css');
   done();
 }
+function reloadCSS(done) {
+  browserSync.reload('*.js');
+  done();
+}
 
 function watch() {
   const watchers = [
@@ -235,6 +239,7 @@ function watch() {
     {
       name: 'Source Files',
       paths: [
+        normalizePath(paths().source.patterns, '**', '*.js'),
         normalizePath(paths().source.patterns, '**', '*.json'),
         normalizePath(paths().source.patterns, '**', '*.md'),
         normalizePath(paths().source.data, '**', '*.json'),
