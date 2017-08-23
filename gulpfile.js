@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
+  umd = require('gulp-umd'),
   argv = require('minimist')(process.argv.slice(2)),
   chalk = require('chalk');
 
@@ -34,10 +35,15 @@ function normalizePath() {
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
 // JS copy
-gulp.task('pl-copy:js', function () {
-  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+gulp.task('pl-copy:js', function() {
+  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.root)} )
+    .pipe(umd())
     .pipe(gulp.dest(normalizePath(paths().public.js)));
 });
+// gulp.task('pl-copy:js', function () {
+//   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+//     .pipe(gulp.dest(normalizePath(paths().public.js)));
+// });
 
 // Images copy
 gulp.task('pl-copy:img', function () {
