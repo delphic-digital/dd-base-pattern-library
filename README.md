@@ -7,6 +7,6 @@ This here is a styleguide that can serve as the base for future projects, hence 
 Set up and run a local copy of the project:
 ```sh
 $ npm install
-$ gulp patternlab:serve
+$ npm start
 ```
 
