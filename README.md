@@ -10,3 +10,11 @@ $ npm install
 $ npm start
 ```
 
+### Utility libraries
+
+Go through and pick out, here's a good resource (note there are competitors included within this, we'll need to make a decision on which to use)
+https://syntax.fm/show/009/dang-that-s-handy-javascript-utility-libraries
+
+### Updating / modernizing 
+
+Submit pull requests with the compnent / utility to be updated & a small analysis of the differences between the old thing and the new thing you're pitching. Team lunch chat to kick it off / in depth chat in the pr.
