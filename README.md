@@ -10,11 +10,43 @@ $ npm install
 $ npm start
 ```
 
+### Components
+
+ - Use BEM classes
+ - Think about accessibility
+
 ### Utility libraries
+
+Each component should aim to have the following:
+
+ - [ ] Be accessible 
+ - [ ] Be responsive
+ - [ ] Be easy to implement
+ - [ ] Be easy to modify (a lot, we know what the designers are like)
+ - [ ] Have good browser support (back to ... ? ie8?)
+
+These would be nice to haves:
+
+ - [ ] Do things in a modern way (ie use es6, easy to create multiple instances, extendible)
+ - [ ] Have no dependencies (ie not requiring a specific version of jQuery) 
+ - [ ] Be lightweight
+ - [ ] Have good documentation
+ - [ ] Be tested
+  
+These are the utility libraries we should aim to have worked out:
+
+ - [ ] Form validation (Parsley / jQuery validate / validatr)
+ - [ ] Modal (micromodal, )
+ - [ ] Slider (slick, owl, )
+ - [ ] Accordion
+ - [ ] Jawbone 
+
 
 Go through and pick out, here's a good resource (note there are competitors included within this, we'll need to make a decision on which to use)
 https://syntax.fm/show/009/dang-that-s-handy-javascript-utility-libraries
 
-### Updating / modernizing 
+### Updating / modernizing components
 
-Submit pull requests with the compnent / utility to be updated & a small analysis of the differences between the old thing and the new thing you're pitching. Team lunch chat to kick it off / in depth chat in the pr.
+ - Use PRs
+ - Write up a small analysis (how is it better than the current, what are it's cons, have you worked up an example - eg in codepen)
+ - Team lunch chat to kick off replacing it.
